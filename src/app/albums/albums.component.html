@@ -1,0 +1,27 @@
+<p>
+  albums works!
+</p>
+
+<div class="row justify-content-center">
+  <div *ngIf="albums.length">
+    <table class="albums-table table table-hover table-responsive">
+      <thead class="thead-dark">
+        <tr>
+          <th *ngFor="let col of cols">
+            {{col}}
+          </th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <tr *ngFor="let rec of albums">
+          <td *ngFor="let col of cols">
+            {{rec[col]}}
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
